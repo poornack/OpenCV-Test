@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE09E10C1EFF750A00E9B49C /* libopencv_core.3.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AE09E10B1EFF750A00E9B49C /* libopencv_core.3.2.0.dylib */; };
+		AE09E10E1EFF753E00E9B49C /* libopencv_highgui.3.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AE09E10D1EFF753E00E9B49C /* libopencv_highgui.3.2.0.dylib */; };
+		AE09E1111EFF759D00E9B49C /* libopencv_imgproc.3.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AE09E1101EFF759D00E9B49C /* libopencv_imgproc.3.2.0.dylib */; };
 		AE60F5071EFF4F7300B0C583 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AE60F5061EFF4F7300B0C583 /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +26,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AE09E10B1EFF750A00E9B49C /* libopencv_core.3.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_core.3.2.0.dylib; path = ../../../../../usr/local/lib/libopencv_core.3.2.0.dylib; sourceTree = "<group>"; };
+		AE09E10D1EFF753E00E9B49C /* libopencv_highgui.3.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_highgui.3.2.0.dylib; path = ../../../../../usr/local/lib/libopencv_highgui.3.2.0.dylib; sourceTree = "<group>"; };
+		AE09E1101EFF759D00E9B49C /* libopencv_imgproc.3.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_imgproc.3.2.0.dylib; path = ../../../../../usr/local/lib/libopencv_imgproc.3.2.0.dylib; sourceTree = "<group>"; };
 		AE60F5031EFF4F7300B0C583 /* OpenCV */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OpenCV; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE60F5061EFF4F7300B0C583 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -32,6 +38,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE09E1111EFF759D00E9B49C /* libopencv_imgproc.3.2.0.dylib in Frameworks */,
+				AE09E10E1EFF753E00E9B49C /* libopencv_highgui.3.2.0.dylib in Frameworks */,
+				AE09E10C1EFF750A00E9B49C /* libopencv_core.3.2.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +50,9 @@
 		AE60F4FA1EFF4F7300B0C583 = {
 			isa = PBXGroup;
 			children = (
+				AE09E1101EFF759D00E9B49C /* libopencv_imgproc.3.2.0.dylib */,
+				AE09E10D1EFF753E00E9B49C /* libopencv_highgui.3.2.0.dylib */,
+				AE09E10B1EFF750A00E9B49C /* libopencv_core.3.2.0.dylib */,
 				AE60F5051EFF4F7300B0C583 /* OpenCV */,
 				AE60F5041EFF4F7300B0C583 /* Products */,
 			);
@@ -218,6 +230,27 @@
 		AE60F50B1EFF4F7300B0C583 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_LDFLAGS = (
+					"-lopencv_shape",
+					"-lopencv_stitching",
+					"-lopencv_objdetect",
+					"-lopencv_superres",
+					"-lopencv_videostab",
+					"-lopencv_calib3d",
+					"-lopencv_features2d",
+					"-lopencv_highgui",
+					"-lopencv_videoio",
+					"-lopencv_imgcodecs",
+					"-lopencv_video",
+					"-lopencv_photo",
+					"-lopencv_ml",
+					"-lopencv_imgproc",
+					"-lopencv_flann",
+					"-lopencv_core",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -225,6 +258,27 @@
 		AE60F50C1EFF4F7300B0C583 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_LDFLAGS = (
+					"-lopencv_shape",
+					"-lopencv_stitching",
+					"-lopencv_objdetect",
+					"-lopencv_superres",
+					"-lopencv_videostab",
+					"-lopencv_calib3d",
+					"-lopencv_features2d",
+					"-lopencv_highgui",
+					"-lopencv_videoio",
+					"-lopencv_imgcodecs",
+					"-lopencv_video",
+					"-lopencv_photo",
+					"-lopencv_ml",
+					"-lopencv_imgproc",
+					"-lopencv_flann",
+					"-lopencv_core",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -248,6 +302,7 @@
 				AE60F50C1EFF4F7300B0C583 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

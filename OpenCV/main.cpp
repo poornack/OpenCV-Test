@@ -7,10 +7,11 @@
 //
 
 #include <iostream>
+#include "opencv2/imgproc.hpp"
+#include "opencv2/core.hpp"
+#include "opencv2/highgui.hpp"
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    std::cout << "I made a change" <<std::endl;
+    std::cout << "Sucessfully built project with libraries linked" << std::endl;
     return 0;
 }
