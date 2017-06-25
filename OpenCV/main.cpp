@@ -18,26 +18,21 @@ int main(int argc, const char * argv[]) {
     
     cv::Mat imageUnchanged = cv::imread("../../Pictures/honda_civic.jpeg", CV_LOAD_IMAGE_UNCHANGED);
     
-    imshow("unchanged", imageUnchanged);
+    cv::namedWindow("Window1", CV_WINDOW_FREERATIO);
+    cv::imshow("Window1", imageUnchanged);
+    cv::waitKey();
     
-    std::cout << "Image row count: " << imageUnchanged.rows << std::endl;
-    std::cout << "Image coloumn count: " << imageUnchanged.cols << std::endl;
-    std::cout << "Image colour depth: " << imageUnchanged.channels() << std::endl;
+    cv::resizeWindow("Window1", 200, 200);
+    cv::waitKey();
     
-    cv::Mat imageGray;
+    cv::resizeWindow("Window1", 500, 500);
+    cv::waitKey();
     
-    cv::cvtColor(imageUnchanged, imageGray, CV_BGR2GRAY);
+    cv::moveWindow("Window1", 0, 0);
+    cv::waitKey();
     
-    imshow("gray", imageGray);
-    
-    std::cout << "Image row count: " << imageGray.rows << std::endl;
-    std::cout << "Image coloumn count: " << imageGray.cols << std::endl;
-    std::cout << "Image colour depth: " << imageGray.channels() << std::endl;
-    
-    //imshow("grayscale", imageMono);
-    
-    cv::waitKey(0);
-    
+    cv::moveWindow("Window1", 500, 500);
+    cv::waitKey();
     
     return 0;
 }
@@ -60,6 +55,13 @@ Read image characteristics:
      std::cout << "Image coloumn count: " << imageGray.cols << std::endl;
      std::cout << "Image colour depth: " << imageGray.channels() << std::endl;
 
+Windows controls
+ Initialize window:
+    cv::namedWindows("Window Name", FLAG) FLAGS: CV_WINDOW_FREERATIO, CV_WINDOWS_AUTOSIZE, ...
+ Move window:
+    cv::moveWindow("Window Name", x-coordinate, y-coordinate)
+ Resize window:
+    cv::resizeWindow("Window Name", x-size, y-size)
 
 
 
