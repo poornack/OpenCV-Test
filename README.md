@@ -1,4 +1,4 @@
 # OpenCV-Test
 
-User for learning OpenCV
+Used for learning OpenCV
 MacOS XCode 9 Project
