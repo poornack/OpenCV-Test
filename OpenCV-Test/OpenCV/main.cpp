@@ -7,6 +7,7 @@
 //
 
 #include <iostream>
+#include <fstream>
 #include "opencv2/imgproc.hpp"
 #include "opencv2/core.hpp"
 #include "opencv2/highgui.hpp"
@@ -16,23 +17,9 @@
 
 int main(int argc, const char * argv[]) {
     
-    cv::Mat imageUnchanged = cv::imread("../../Pictures/honda_civic.jpeg", CV_LOAD_IMAGE_UNCHANGED);
-    
-    cv::namedWindow("Window1", CV_WINDOW_FREERATIO);
-    cv::imshow("Window1", imageUnchanged);
-    cv::waitKey();
-    
-    cv::resizeWindow("Window1", 200, 200);
-    cv::waitKey();
-    
-    cv::resizeWindow("Window1", 500, 500);
-    cv::waitKey();
-    
-    cv::moveWindow("Window1", 0, 0);
-    cv::waitKey();
-    
-    cv::moveWindow("Window1", 500, 500);
-    cv::waitKey();
+    cv::namedWindow("Window Name", 1);
+    cv::resizeWindow("Window Name", 10, 10);
+   
     
     return 0;
 }
